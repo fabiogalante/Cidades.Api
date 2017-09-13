@@ -13,11 +13,20 @@ namespace Cidades.Api.Controllers
     {
         public JsonResult GetCities()
         {
-            return new JsonResult(new List<object>
-            {
-                new {id = 1, Name = "São Paulo"},
-                new {id = 2, Name = "Rio de Janeiro"}
-            });
+
+
+          
+
+            //return new JsonResult(new List<object>
+            //{
+            //    new {id = 1, Name = "São Paulo"},
+            //    new {id = 2, Name = "Rio de Janeiro"}
+            //});
+
+
+           
+
+            return new JsonResult(CidadeDataStore.ObterCidades.Cidades);
         }
 
 
