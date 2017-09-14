@@ -13,18 +13,11 @@ namespace Cidades.Api.Controllers
     {
         public JsonResult GetCities()
         {
-
-
-          
-
             //return new JsonResult(new List<object>
             //{
             //    new {id = 1, Name = "São Paulo"},
             //    new {id = 2, Name = "Rio de Janeiro"}
             //});
-
-
-           
 
             return new JsonResult(CidadeDataStore.ObterCidades.Cidades);
         }
@@ -35,5 +28,13 @@ namespace Cidades.Api.Controllers
         //    new {id = 1, Name = "São Paulo"},
         //    new {id = 2, Name = "Rio de Janeiro"}
         //});
+
+        [HttpGet("{id}")]
+        public JsonResult GetCidades(int id)
+        {
+
+            var cidade = CidadeDataStore.ObterCidades.Cidades.FirstOrDefault(c => c.Id == id);
+            return new JsonResult(cidade);
+        }
     }
 }

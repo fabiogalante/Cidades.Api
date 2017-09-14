@@ -13,6 +13,12 @@ namespace Cidades.Api
         public static CidadeDataStore ObterCidades { get; } = new CidadeDataStore();
 
 
+        public CidadeDataStore(List<CidadeDto> cidades)
+        {
+            Cidades = cidades;
+        }
+
+
         public List<CidadeDto> Cidades { get; set; }
 
         public CidadeDataStore()
