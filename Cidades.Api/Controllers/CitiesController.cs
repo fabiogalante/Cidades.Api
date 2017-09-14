@@ -32,7 +32,6 @@ namespace Cidades.Api.Controllers
         [HttpGet("{id}")]
         public JsonResult GetCidades(int id)
         {
-
             var cidade = CidadeDataStore.ObterCidades.Cidades.FirstOrDefault(c => c.Id == id);
             return new JsonResult(cidade);
         }
