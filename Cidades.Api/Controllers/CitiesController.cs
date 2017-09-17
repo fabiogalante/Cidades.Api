@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace Cidades.Api.Controllers
 {
     //[Produces("application/json")]
-    [Route("api/Cities")]
+    [Route("api/cidades")]
     public class CitiesController : Controller
     {
         public JsonResult GetCities()

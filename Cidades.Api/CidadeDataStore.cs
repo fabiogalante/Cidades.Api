@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using Cidades.Api.Models;
 
 namespace Cidades.Api
 {
     public class CidadeDataStore
     {
-
         // Auto-Property Initializer
         public static CidadeDataStore ObterCidades { get; } = new CidadeDataStore();
 
@@ -24,63 +20,73 @@ namespace Cidades.Api
         public CidadeDataStore()
         {
             // init dummy data
-            Cidades = new List<CidadeDto>()
+            Cidades = new List<CidadeDto>
             {
                 new CidadeDto
                 {
-                     Id = 1,
-                     Nome = "New York City",
-                     Descricao = "The one with that big park.",
-                     //PointsOfInterest = new List<PointOfInterestDto>()
-                     //{
-                     //    new PointOfInterestDto() {
-                     //        Id = 1,
-                     //        Name = "Central Park",
-                     //        Description = "The most visited urban park in the United States." },
-                     //     new PointOfInterestDto() {
-                     //        Id = 2,
-                     //        Name = "Empire State Building",
-                     //        Description = "A 102-story skyscraper located in Midtown Manhattan." },
-                     //}
+                    Id = 1,
+                    Nome = "New York City",
+                    Descricao = "The one with that big park.",
+                    LugaresInteressantes = new List<LugaresInteressantesDto>
+                    {
+                        new LugaresInteressantesDto
+                        {
+                            Id = 1,
+                            Nome = "Central Park",
+                            Descricao = "The most visited urban park in the United States."
+                        },
+                        new LugaresInteressantesDto
+                        {
+                            Id = 2,
+                            Nome = "Empire State Building",
+                            Descricao = "A 102-story skyscraper located in Midtown Manhattan."
+                        }
+                    }
                 },
                 new CidadeDto
                 {
                     Id = 2,
                     Nome = "Antwerp",
                     Descricao = "The one with the cathedral that was never really finished.",
-                    //PointsOfInterest = new List<PointOfInterestDto>()
-                    // {
-                    //     new PointOfInterestDto() {
-                    //         Id = 3,
-                    //         Name = "Cathedral of Our Lady",
-                    //         Description = "A Gothic style cathedral, conceived by architects Jan and Pieter Appelmans." },
-                    //      new PointOfInterestDto() {
-                    //         Id = 4,
-                    //         Name = "Antwerp Central Station",
-                    //         Description = "The the finest example of railway architecture in Belgium." },
-                    // }
+                    LugaresInteressantes = new List<LugaresInteressantesDto>
+                    {
+                        new LugaresInteressantesDto
+                        {
+                            Id = 3,
+                            Nome = "Cathedral of Our Lady",
+                            Descricao = "A Gothic style cathedral, conceived by architects Jan and Pieter Appelmans."
+                        },
+                        new LugaresInteressantesDto
+                        {
+                            Id = 4,
+                            Nome = "Antwerp Central Station",
+                            Descricao = "The the finest example of railway architecture in Belgium."
+                        }
+                    }
                 },
                 new CidadeDto
                 {
-                    Id= 3,
+                    Id = 3,
                     Nome = "Paris",
                     Descricao = "The one with that big tower.",
-                    //PointsOfInterest = new List<PointOfInterestDto>()
-                    // {
-                    //     new PointOfInterestDto() {
-                    //         Id = 5,
-                    //         Name = "Eiffel Tower",
-                    //         Description = "A wrought iron lattice tower on the Champ de Mars, named after engineer Gustave Eiffel." },
-                    //      new PointOfInterestDto() {
-                    //         Id = 6,
-                    //         Name = "The Louvre",
-                    //         Description = "The world's largest museum." },
-                    // }
+                    LugaresInteressantes = new List<LugaresInteressantesDto>
+                    {
+                        new LugaresInteressantesDto
+                        {
+                            Id = 5,
+                            Nome = "Eiffel Tower",
+                            Descricao =
+                                "A wrought iron lattice tower on the Champ de Mars, named after engineer Gustave Eiffel."
+                        },
+                        new LugaresInteressantesDto
+                        {
+                            Id = 6,
+                            Nome = "The Louvre",
+                            Descricao = "The world's largest museum."
+                        }
+                    }
                 }
             };
-
-
-
         }
     }
 }
